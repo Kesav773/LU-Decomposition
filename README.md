@@ -42,17 +42,33 @@ Steps Print the corresponding variable (solution) to get the output
 (i) To find the L and U matrix
 ```
 /*
-Program to find the L and U matrix.
-Developed by: 
-RegisterNumber: 
+'''Program to find L and U matrix using LU decomposition.
+Developed by: Kesav K M
+RegisterNumber: 212224110031
+'''
+import numpy as np
+from scipy.linalg import lu
+matrix=eval(input())
+A = np.array(matrix)
+P, L, U = lu(A)
+print(L)
+print(U)
 */
 ```
 (ii) To find the LU Decomposition of a matrix
 ```
 /*
-Program to find the LU Decomposition of a matrix.
-Developed by: 
-RegisterNumber: 
+'''Program to find L and U matrix using LU decomposition.
+Developed by: Kesav K M
+RegisterNumber: 212224110031
+'''
+import numpy as np
+from scipy.linalg import lu, lu_solve, lu_factor
+A = np.array([[3, 2, 7], [2, 3, 1], [3, 4, 1]])
+B = np.array([4, 5, 7])
+lu_piv = lu_factor(A)
+X = lu_solve(lu_piv, B)
+print(X)
 */
 ```
 
